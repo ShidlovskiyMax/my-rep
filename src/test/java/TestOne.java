@@ -33,8 +33,5 @@ public class TestOne extends TestInit{
         sleep(2000);
         myAccountPage.getSignOut().click();
         Assert.assertTrue(homePage.getSingIn().isDisplayed());
-
-
-
     }
 }
