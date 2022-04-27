@@ -13,7 +13,6 @@ public class TestOne extends TestInit{
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com.ua/");
-        driver.quit();
 
 
     }
@@ -32,6 +31,12 @@ public class TestOne extends TestInit{
         MyAccountPage myAccountPage = new MyAccountPage(driver);
         sleep(2000);
         myAccountPage.getSignOut().click();
+        sleep(2000);
         Assert.assertTrue(homePage.getSingIn().isDisplayed());
     }
-}
+    @Test
+    public void testregister(){
+
+    }
+
+    }
