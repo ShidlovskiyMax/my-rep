@@ -37,7 +37,7 @@ public class TestOne extends TestInit {
     }
 
     @Test
-    public void testCheakGoogle() {
+    public void testChetakGoogle() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com.ua/");
