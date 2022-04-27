@@ -6,17 +6,17 @@ import org.testng.annotations.Test;
 
 import static java.lang.Thread.sleep;
 
-public class TestOne extends TestInit{
+public class TestOne extends TestInit {
 
     @Test
-    public void testone(){
+    public void testone() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com.ua/");
-        driver.quit();
 
 
     }
+
     @Test
     public void testLogInAndExit() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
@@ -32,6 +32,14 @@ public class TestOne extends TestInit{
         MyAccountPage myAccountPage = new MyAccountPage(driver);
         sleep(2000);
         myAccountPage.getSignOut().click();
+        sleep(2000);
         Assert.assertTrue(homePage.getSingIn().isDisplayed());
+    }
+
+    @Test
+    public void testChetakGoogle() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.google.com.ua/");
     }
 }

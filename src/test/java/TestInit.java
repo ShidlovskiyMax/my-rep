@@ -15,10 +15,10 @@ public class TestInit {
     }
 
 
-//    @AfterMethod
-//    public void after(){
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void after(){
+        driver.quit();
+    }
 
     public void openUrl(String site){
         driver.get(site);
