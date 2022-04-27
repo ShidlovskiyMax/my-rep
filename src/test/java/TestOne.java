@@ -42,4 +42,11 @@ public class TestOne extends TestInit {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com.ua/");
     }
+
+    @Test
+    public void tesGoogle() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.google.com.ua/");
+    }
 }
