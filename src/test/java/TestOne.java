@@ -13,10 +13,7 @@ public class TestOne extends TestInit {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com.ua/");
-
-
     }
-
     @Test
     public void testLogInAndExit() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
@@ -35,18 +32,32 @@ public class TestOne extends TestInit {
         sleep(2000);
         Assert.assertTrue(homePage.getSingIn().isDisplayed());
     }
-
     @Test
     public void testChetakGoogle() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com.ua/");
     }
-
     @Test
     public void tesGoogle() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com.ua/");
+    }
+    @Test
+    public void testWikipediaWatch(){
+        HomePage homePage = new HomePage(driver);
+        openUrl("https://en.wikipedia.org/wiki/English_Wikipedia");
+        homePage.getMainPage().click();
+        homePage.getContents().click();
+        homePage.getCurrentEvents().click();
+        homePage.getRandomArticle().click();
+        homePage.getAboutWikipedia().click();
+        homePage.getContactUs().click();
+        homePage.getDonate().click();
+        homePage.getHelp().click();
+        homePage.getMainPage();
+        ContentsPage contentsPage = new ContentsPage(driver);
+        contentsPage.getSearchInput().sendKeys("Elom Muck");
     }
 }
