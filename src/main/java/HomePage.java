@@ -15,4 +15,36 @@ public class HomePage  extends BasePage {
     public WebElement getMyAccount() {
         return driver.findElement(By.xpath("//a[@id='menu-my-account']"));
     }
+
+    public WebElement getMainPage() {
+        return driver.findElement(By.xpath("//li[@id='n-mainpage-description']"));
+
+    }
+
+    public WebElement getContents() {
+        return driver.findElement(By.xpath("//li[@id='n-mainpage-description']"));
+    }
+
+    public WebElement getCurrentEvents() {
+        return driver.findElement(By.xpath("//li[@id='n-currentevents']"));
+    }
+
+    public WebElement getRandomArticle() {
+        return driver.findElement(By.xpath("//li[@id='n-randompage']"));
+    }
+
+    public WebElement getAboutWikipedia() {
+        return driver.findElement(By.xpath("//li[@id='n-aboutsite']"));
+    }
+
+    public WebElement getContactUs() {
+        return driver.findElement(By.xpath("//li[@id='n-contactpage']"));
+    }
+
+    public WebElement getDonate() {
+        return driver.findElement(By.xpath("//li[@id='n-sitesupport']"));}
+
+    public WebElement getHelp() {
+        return driver.findElement(By.xpath("//li[@id='n-help']"));
+    }
 }
