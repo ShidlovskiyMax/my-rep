@@ -10,4 +10,8 @@ public class ContentsPage extends BasePage {
     public WebElement getSearchInput() {
         return driver.findElement(By.xpath("//input[@id='searchInput']"));
     }
+
+    public WebElement getEarchButton() {
+        return driver.findElement(By.xpath("//input[@id='searchButton']"));
+    }
 }

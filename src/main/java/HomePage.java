@@ -47,4 +47,12 @@ public class HomePage  extends BasePage {
     public WebElement getHelp() {
         return driver.findElement(By.xpath("//li[@id='n-help']"));
     }
+
+    public WebElement getAccountList() {
+        return driver.findElement(By.xpath("//a[@id='nav-link-accountList']"));
+    }
+
+    public WebElement getHelloShidlovskiyMax() {
+        return driver.findElement(By.xpath("//div//a[@id='nav-link-accountList']"));
+    }
 }

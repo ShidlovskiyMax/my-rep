@@ -5,9 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static java.lang.Thread.sleep;
-
 public class TestOne extends TestInit {
-
     @Test
     public void testone() {
         WebDriverManager.chromedriver().setup();
@@ -24,12 +22,12 @@ public class TestOne extends TestInit {
         singInPage.getEmailBtn().sendKeys("xamccb@mail.ru");
         singInPage.getPasswordBtn().sendKeys("Maks123098456");
         singInPage.getSignIn().click();
-        sleep(5000);
+        sleep(5);
         homePage.getMyAccount().click();
         MyAccountPage myAccountPage = new MyAccountPage(driver);
-        sleep(2000);
+        sleep(2);
         myAccountPage.getSignOut().click();
-        sleep(2000);
+        sleep(2);
         Assert.assertTrue(homePage.getSingIn().isDisplayed());
     }
     @Test
@@ -57,7 +55,27 @@ public class TestOne extends TestInit {
         homePage.getDonate().click();
         homePage.getHelp().click();
         homePage.getMainPage();
+
         ContentsPage contentsPage = new ContentsPage(driver);
-        contentsPage.getSearchInput().sendKeys("Elom Muck");
+        contentsPage.getSearchInput().sendKeys("Elon Musk");
+        contentsPage.getEarchButton().click();
+    }
+    @Test
+    public void TestRegisterAmazon(){
+        HomePage homePage = new HomePage(driver);
+        openUrl("https://www.amazon.com/");
+        homePage.getAccountList().click();
+
+        SignInPage signInPage = new SignInPage(driver);
+        signInPage.getCreateAmazonAccount().click();
+
+        CreateAccountPage createAccountPage = new CreateAccountPage(driver);
+        createAccountPage.getYourName().sendKeys("ShidlovskiyMax");;
+        createAccountPage.getEmail().sendKeys("xamccb@gmail.com");
+        createAccountPage.getPassword().sendKeys("Maks123098");
+        createAccountPage.getPasswordCheck().sendKeys("Maks123098");
+
+        Assert.assertTrue(createAccountPage.getContinue().isDisplayed());
+
     }
 }

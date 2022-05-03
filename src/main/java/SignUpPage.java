@@ -10,4 +10,5 @@ public class SignUpPage extends BasePage {
     public WebElement inputEmailBtn() {
         return driver.findElement(By.xpath("//input[@id='email']"));
     }
-}
+
+    }
