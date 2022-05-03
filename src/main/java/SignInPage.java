@@ -3,6 +3,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class SignInPage extends BasePage{
+    public Object getSign;
+
     public SignInPage(WebDriver driver) {
         super(driver);
     }
@@ -18,4 +20,8 @@ public class SignInPage extends BasePage{
         return driver.findElement(By.xpath("//input[@name='password']"));}
     public WebElement getSignIn() {
         return driver.findElement(By.xpath("//button[@id='signin']"));}
+
+    public WebElement getCreateAmazonAccount() {
+        return driver.findElement(By.xpath("//a[@id='createAccountSubmit']"));
+    }
 }
