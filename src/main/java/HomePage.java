@@ -55,4 +55,13 @@ public class HomePage  extends BasePage {
     public WebElement getHelloShidlovskiyMax() {
         return driver.findElement(By.xpath("//div//a[@id='nav-link-accountList']"));
     }
+
+    public WebElement getFieldKeywords() {
+        return driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
+    }
+
+    public WebElement getFind() {
+        return driver.findElement(By.xpath("//input[@id='nav-search-submit-button']"));
+
+    }
 }

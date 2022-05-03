@@ -10,12 +10,12 @@ public class TestInit {
     WebDriver driver;
 
     @BeforeMethod
-    public void setUp(){
+    public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
-    public void sleep(int secconds){
+    public void sleep(int secconds) {
         try {
             sleep(secconds * 1000);
         } catch (Exception e) {
@@ -23,13 +23,12 @@ public class TestInit {
         }
     }
 
-
     @AfterMethod
-    public void after(){
+    public void after() {
         driver.quit();
     }
 
-    public void openUrl(String site){
+    public void openUrl(String site) {
         driver.get(site);
     }
 }
