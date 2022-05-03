@@ -74,8 +74,20 @@ public class TestOne extends TestInit {
         createAccountPage.getEmail().sendKeys("xamccb@gmail.com");
         createAccountPage.getPassword().sendKeys("Maks123098");
         createAccountPage.getPasswordCheck().sendKeys("Maks123098");
-
         Assert.assertTrue(createAccountPage.getContinue().isDisplayed());
+    }
+    @Test
+    public void TestProductSearch(){
+        HomePage homePage  = new HomePage(driver);
+        openUrl("https://www.amazon.com/ref=nav_lo");
+        homePage.getFieldKeywords().sendKeys("gaming keyboard");
+        homePage.getFind().click();
 
+        FindPage findPage = new FindPage(driver);
+        findPage.getFeaturedBrands().click();
+        findPage.getPriceMin().sendKeys("50");
+        findPage.getPriceMax().sendKeys("450");
+        findPage.getAccept().click();
+        Assert.assertTrue(findPage.getAccept().isDisplayed());
     }
 }
