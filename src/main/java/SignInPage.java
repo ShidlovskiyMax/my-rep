@@ -1,3 +1,4 @@
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,5 +24,21 @@ public class SignInPage extends BasePage{
 
     public WebElement getCreateAmazonAccount() {
         return driver.findElement(By.xpath("//a[@id='createAccountSubmit']"));
+    }
+
+    public WebElement getLoginEmail() {
+        return driver.findElement(By.xpath("//input[@id='ap_email']"));
+    }
+
+    public WebElement getContinue() {
+        return driver.findElement(By.xpath("//input[@id='continue']"));
+    }
+
+    public WebElement getPassword() {
+        return driver.findElement(By.xpath("//input[@id='ap_password']"));
+    }
+
+    public WebElement getSignInBtn() {
+        return driver.findElement(By.xpath("//input[@id='signInSubmit']"));
     }
 }
