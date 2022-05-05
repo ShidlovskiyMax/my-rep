@@ -17,7 +17,7 @@ public class TestInit {
     }
     public void sleep(int secconds) {
         try {
-            sleep(secconds * 1000);
+            Thread.sleep(secconds * 1000);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
