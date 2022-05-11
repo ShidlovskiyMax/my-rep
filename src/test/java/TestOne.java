@@ -101,11 +101,11 @@ public class TestOne extends TestInit {
         findPage.getPriceMax().sendKeys("450");
         findPage.getAccept().click();
 
-        Assert.assertTrue(findPage.getAccept().isDisplayed());
+        Assert.assertTrue(findPage.getResult().isDisplayed());
     }
 
     @Test
-    public void TestBuyingProduct(){
+    public void TestBuyingProduct() {
         HomePage homePage = new HomePage(driver);
         openUrl("https://www.amazon.com/ref=nav_lo");
         homePage.getAccountList().click();
@@ -122,5 +122,21 @@ public class TestOne extends TestInit {
         findPage.getBuyNow().click();
 
         Assert.assertTrue(findPage.shippingPayment().isDisplayed());
+    }
+
+    @Test
+    public void TestProductSearchTools() {
+        HomePage homePage = new HomePage(driver);
+        openUrl("https://www.amazon.com/ref=nav_lo");
+        homePage.getFieldKeywords().sendKeys("Tools and Home Improvement");
+        homePage.getFind().click();
+
+        FindPage findPage = new FindPage(driver);
+        findPage.getFeaturedBrandsProduct().click();
+        findPage.getPriceMin().sendKeys("100");
+        findPage.getPriceMax().sendKeys("400");
+        findPage.getAccept().click();
+
+        Assert.assertTrue(findPage.getResult().isDisplayed());
     }
 }

@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class FindPage extends BasePage {
-    public FindPage(WebDriver driver){
+    public FindPage(WebDriver driver) {
         super(driver);
     }
 
-    public WebElement getFeaturedBrands () {
+    public WebElement getFeaturedBrands() {
         return driver.findElement(By.xpath("//li[@id='p_89/Razer']"));
     }
 
@@ -28,6 +28,7 @@ public class FindPage extends BasePage {
     public WebElement getDeliverTo() {
         return driver.findElement(By.xpath("//a[@id='nav-global-location-popover-link']"));
     }
+
     public WebElement getlocation() {
         return driver.findElement(By.xpath("//a[@id='nav-global-location-popover-link']"));
     }
@@ -50,5 +51,13 @@ public class FindPage extends BasePage {
 
     public WebElement shippingPayment() {
         return driver.findElement(By.xpath("//div[@id='nav-inner']"));
+    }
+
+    public WebElement getResult() {
+        return driver.findElement(By.xpath("//span[contains(text(), 'RESULTS')]"));
+    }
+
+    public WebElement getFeaturedBrandsProduct() {
+        return driver.findElement(By.xpath("//li[@id='p_89/BLACK+DECKER']"));
     }
 }
