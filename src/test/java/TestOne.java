@@ -139,4 +139,18 @@ public class TestOne extends TestInit {
 
         Assert.assertTrue(findPage.getResult().isDisplayed());
     }
+    @Test
+    public void TestLogInToMyAccount(){
+        HomePage homePage = new HomePage(driver);
+        openUrl("https://www.amazon.com/ref=nav_lo");
+        homePage.getAccountList().click();
+
+        SignInPage signInPage = new SignInPage(driver);
+        signInPage.getLoginEmail().sendKeys("xamccb7@gmail.com");
+        signInPage.getContinue().click();
+        signInPage.getPassword().sendKeys("Maks123098");
+        signInPage.getSignInBtn().click();
+
+        Assert.assertTrue(homePage.getHelloMaxStats().isDisplayed());
+    }
 }
