@@ -64,4 +64,8 @@ public class HomePage  extends BasePage {
         return driver.findElement(By.xpath("//input[@id='nav-search-submit-button']"));
 
     }
+
+    public WebElement getHelloMaxStats() {
+        return driver.findElement(By.xpath("//span[@id='nav-link-accountList-nav-line-1']"));
+    }
 }
